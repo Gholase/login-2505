@@ -1,0 +1,13 @@
+# top 4 lines
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-ubuntu-pod1
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+    
+
