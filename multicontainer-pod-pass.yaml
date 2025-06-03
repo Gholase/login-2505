@@ -1,0 +1,17 @@
+# top 4 lines single conatiner
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multiconatiner-pod-ngixandcustomeimage
+spec:
+  containers:
+  - name: nginx1
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+    
+  - name: nodeapi
+    image: priya0560/login-2505:1.1
+    ports:
+    - containerPort: 8080
+    
