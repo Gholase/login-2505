@@ -1,0 +1,15 @@
+# top 4 lines single conatiner
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multiconatiner-pod-pass
+spec:
+  containers:
+  - name: nginx1
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+    
+  - name: ubuntu
+    image: ubuntu
+    command: ['sh', '-c', 'echo "hello" && sleep 20']
